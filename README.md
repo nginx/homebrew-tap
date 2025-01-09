@@ -5,12 +5,12 @@ This repository contains Homebrew Formulae for NGINX projects
 Add the tap with
 
 ```bash
-brew tap nginxinc/tap
+brew tap nginx/tap
 ```
 
 ## NGINX Prometheus Exporter
 
-The source for the NGINX Prometheus Exporter is [here](https://github.com/nginxinc/nginx-prometheus-exporter).
+The source for the NGINX Prometheus Exporter is [here](https://github.com/nginx/nginx-prometheus-exporter).
 
 Install the NGINX Prometheus Exporter with
 
@@ -20,7 +20,7 @@ brew install nginx-prometheus-exporter
 
 ## NGINX Plus Integration with Cloud Autoscaling
 
-The source for the NGINX Plus Integration with Cloud Autoscaling is [here](https://github.com/nginxinc/nginx-asg-sync).
+The source for the NGINX Plus Integration with Cloud Autoscaling is [here](https://github.com/nginx/nginx-asg-sync).
 
 Install the NGINX Plus Integration with Cloud Autoscaling with
 

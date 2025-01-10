@@ -5,13 +5,13 @@
 class NginxPrometheusExporter < Formula
   desc "NGINX Prometheus Exporter for NGINX and NGINX Plus"
   homepage "https://github.com/nginx/nginx-prometheus-exporter"
-  version "1.4.0"
+  version "1.4.1"
   license "Apache-2.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.0/nginx-prometheus-exporter_1.4.0_darwin_amd64.tar.gz"
-      sha256 "481f88a0170742693b80c14b1f654a389d4df711a2509ce62a8a11f6ad81a296"
+    if Hardware::CPU.intel?
+      url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.1/nginx-prometheus-exporter_1.4.1_darwin_amd64.tar.gz"
+      sha256 "871d863a5fa561f46812bc0d96582c51171481d72ecfc12df410ed7b475b3dca"
 
       def install
         bin.install "nginx-prometheus-exporter"
@@ -20,9 +20,9 @@ class NginxPrometheusExporter < Formula
         man1.install "manpages/nginx-prometheus-exporter.1.gz"
       end
     end
-    on_arm do
-      url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.0/nginx-prometheus-exporter_1.4.0_darwin_arm64.tar.gz"
-      sha256 "bac08cc42313708ed7c255609cbde964284ee03e68dc4ed04007982badea43f2"
+    if Hardware::CPU.arm?
+      url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.1/nginx-prometheus-exporter_1.4.1_darwin_arm64.tar.gz"
+      sha256 "9f6cd277fc9a7ed57398c08ecb34fc8f1a06521a8399f0f20e5f14cb695e68a7"
 
       def install
         bin.install "nginx-prometheus-exporter"
@@ -34,10 +34,10 @@ class NginxPrometheusExporter < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.0/nginx-prometheus-exporter_1.4.0_linux_amd64.tar.gz"
-        sha256 "b205572ff6a89e4bdfec7519e936f7cc8d1bf1ef133cee26aef4bc4bc4ea4b4a"
+        url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.1/nginx-prometheus-exporter_1.4.1_linux_amd64.tar.gz"
+        sha256 "2708d900fea0666aa5de0397c850ccfe0c11449c7ea75cc8534d7478ba8adce9"
 
         def install
           bin.install "nginx-prometheus-exporter"
@@ -47,10 +47,10 @@ class NginxPrometheusExporter < Formula
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.0/nginx-prometheus-exporter_1.4.0_linux_armv6.tar.gz"
-        sha256 "6df6e2606a5d7c995432064e57fc3aa01807b525476977da14aec6bf89557b9f"
+        url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.1/nginx-prometheus-exporter_1.4.1_linux_armv6.tar.gz"
+        sha256 "24013af08abe3b7782e5d3a68963b89ee1418a7a86e5eb87f00a7d6954424bf5"
 
         def install
           bin.install "nginx-prometheus-exporter"
@@ -60,10 +60,10 @@ class NginxPrometheusExporter < Formula
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.0/nginx-prometheus-exporter_1.4.0_linux_arm64.tar.gz"
-        sha256 "ec416e160c8c238ed27e7c27a60fa80a5b5d7848edd70f0165878ab5b9f5fb4a"
+        url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.4.1/nginx-prometheus-exporter_1.4.1_linux_arm64.tar.gz"
+        sha256 "3f34c808bcf74cb965a7b91d072b54112dc22ed0d8f7599c7d85742c810cb73c"
 
         def install
           bin.install "nginx-prometheus-exporter"

@@ -5,24 +5,24 @@
 class NginxAsgSync < Formula
   desc "NGINX Plus Integration with Cloud Autoscaling"
   homepage "https://github.com/nginx/nginx-asg-sync"
-  version "1.0.0"
+  version "1.0.1"
   license "BSD-2-Clause"
   depends_on :linux
 
-  on_intel do
+  if Hardware::CPU.intel?
     if Hardware::CPU.is_64_bit?
-      url "https://github.com/nginx/nginx-asg-sync/releases/download/v1.0.0/nginx-asg-sync_1.0.0_linux_amd64.tar.gz"
-      sha256 "dc1d85e4b3e40c78fda9f831aa3fc245cf6c14997edb0a5bda90dfa5695d480d"
+      url "https://github.com/nginx/nginx-asg-sync/releases/download/v1.0.1/nginx-asg-sync_1.0.1_linux_amd64.tar.gz"
+      sha256 "30d6ca151a11bbc44d2a7da08dd4d43c845f688aef11f05aa22b8950fd9dca3c"
 
       def install
         bin.install "nginx-asg-sync"
       end
     end
   end
-  on_arm do
+  if Hardware::CPU.arm?
     if Hardware::CPU.is_64_bit?
-      url "https://github.com/nginx/nginx-asg-sync/releases/download/v1.0.0/nginx-asg-sync_1.0.0_linux_arm64.tar.gz"
-      sha256 "4b5604a671dd928c7454116d145bfca09278ec200e5f2d9d0248b63f73ae5d61"
+      url "https://github.com/nginx/nginx-asg-sync/releases/download/v1.0.1/nginx-asg-sync_1.0.1_linux_arm64.tar.gz"
+      sha256 "11938eac6ff90e8c8e98e040f8f3ccab3ae63427626cd694963619fd9f6066af"
 
       def install
         bin.install "nginx-asg-sync"

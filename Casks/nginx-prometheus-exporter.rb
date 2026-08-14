@@ -3,7 +3,7 @@ cask "nginx-prometheus-exporter" do
   name "nginx-prometheus-exporter"
   desc "NGINX Prometheus Exporter for NGINX and NGINX Plus"
   homepage "https://github.com/nginx/nginx-prometheus-exporter"
-  version "1.5.1"
+  version "1.5.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "nginx-prometheus-exporter" do
   on_macos do
     on_intel do
       url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v#{version}/nginx-prometheus-exporter_#{version}_darwin_amd64.tar.gz"
-      sha256 "860884b6e240595c81848c1f04ac1af7460b05b1e852d28d845aa64375a3c030"
+      sha256 "e84d2f7efcad135c137313751ce1fb3b3a6790b0cf7640dbf252b98aa9ef5321"
     end
     on_arm do
       url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v#{version}/nginx-prometheus-exporter_#{version}_darwin_arm64.tar.gz"
-      sha256 "3b9c62f36e14278f849172f9dfca0412c14466076de0259020db5c91cac8870c"
+      sha256 "781106d36a7875f09454b7818b728760a5f122cb15d7dcda26139a546dfc6a3c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v#{version}/nginx-prometheus-exporter_#{version}_linux_amd64.tar.gz"
-      sha256 "42ddc7ac31c70021d2a5c10414d473526490769632c1ef430b95d76dd1e3c187"
+      sha256 "3a0dd1ea6db57cd360544d0aed38df4adabcfeb31e931dc481d535c66f92641d"
     end
     on_arm do
       url "https://github.com/nginx/nginx-prometheus-exporter/releases/download/v#{version}/nginx-prometheus-exporter_#{version}_linux_arm64.tar.gz"
-      sha256 "8bea88fe912c63791de1fd35c8829f89c2e18b87fdb001c9b65fc371b2ebef3c"
+      sha256 "a0b1a5f5bba09483bd2e04c759c1a75fffe46ca72c0314ee2bb925d1742ff23b"
     end
   end
 
